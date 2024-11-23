@@ -1,0 +1,20 @@
+local gameLists = {
+    [210851291] = "https://raw.githubusercontent.com/Losenry/seraph.script/main/Client/LocalScript/Freemium/Folder/Build-A-Boat.lua",
+}
+
+local function loadGameScript(gameList)
+    local scriptUrl = gameList[game.gameId]
+    local Code = game:HttpGet(scriptUrl)
+    if scriptUrl and Code ~= nil then
+        getgenv().AuthTime = tick()
+        warn('Url: '..scriptUrl)
+        loadstring(game:HttpGet(scriptUrl))()
+    else
+        game.Players.LocalPlayer:Kick("Freemium are not support this game yet!")
+    end
+end
+
+loadGameScript(gameLists)
+
+local TimeUsed = tick()
+print('Done in '..tick() - TimeUsed)
