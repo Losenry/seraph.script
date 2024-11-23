@@ -1,6 +1,7 @@
 local gameLists = {
     [210851291] = "https://raw.githubusercontent.com/Losenry/seraph.script/main/Client/LocalScript/Freemium/Folder/Build-A-Boat.lua",
     [5750914919] = "https://raw.githubusercontent.com/Losenry/seraph.script/main/Client/LocalScript/Freemium/Folder/Fisch.lua",
+    [1335695570] = "https://raw.githubusercontent.com/Losenry/seraph.script/main/Client/LocalScript/Freemium/Folder/Ninja-Legend.lua",
 }
 
 local function loadGameScript(gameList)
