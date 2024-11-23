@@ -6596,7 +6596,7 @@ if shared.Aleonor == "Apocalypse" then
         -- If any scripts are currently running now from task scheduler, the scope won't close until all running threads are closed
         -- (thanks for coming to my ted talk)
     end
-else
+elseif shared.Aleonor == "Arternos" then
     -- Will be used later for getting flattened globals
     local ImportGlobals
 
