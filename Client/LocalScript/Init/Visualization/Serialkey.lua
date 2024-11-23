@@ -1,11 +1,4 @@
--- Project Aleonor x Raphael
---discord.gg/boronide, code generated using luamin.js™
-
-
-
---discord.gg/boronide, code generated using luamin.js™
-
-
+-- PROJECT R4PAH3L
 
 local L_1_ = {
 	_uwUuwUuwUOwOuWuuwUOwOuwUOwoOwOUwu = (function()
