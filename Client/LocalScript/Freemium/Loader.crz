@@ -1,5 +1,6 @@
 local gameLists = {
     [210851291] = "https://raw.githubusercontent.com/Losenry/seraph.script/main/Client/LocalScript/Freemium/Folder/Build-A-Boat.lua",
+    [5750914919] = "https://raw.githubusercontent.com/Losenry/seraph.script/main/Client/LocalScript/Freemium/Folder/Fisch.lua",
 }
 
 local function loadGameScript(gameList)
@@ -7,6 +8,7 @@ local function loadGameScript(gameList)
     local Code = game:HttpGet(scriptUrl)
     if scriptUrl and Code ~= nil then
         getgenv().AuthTime = tick()
+        print("ID: "..tostring(game.GameId))
         warn('Url: '..scriptUrl)
         loadstring(game:HttpGet(scriptUrl))()
     else
