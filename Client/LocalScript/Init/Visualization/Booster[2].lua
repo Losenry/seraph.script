@@ -171,6 +171,7 @@ boost.booster = function()
                 for key, value in pairs(flagtables) do
                     local success, exists = pcall(getfflag, cleanFlagName(key))
                     if success and exists then
+						warn("Optimize successfully")
                         pcall(setfflag, cleanFlagName(key), value)
                     end
                 end
