@@ -1,4 +1,5 @@
 local PROFILE = {}
+local HttpService = game:GetService("HttpService")
 local CONFIG = {
     SERVER_URL = "http://192.168.100.220:5000/submit",
     RETRY_ATTEMPTS = 3,
@@ -27,7 +28,7 @@ local function log(message, level)
     end
 end
 
-local function PROFILE.safeHttpRequest(url, method, body)
+function PROFILE.safeHttpRequest(url, method, body)
     local http_request = http_request or syn and syn.request or request
     
     if not http_request then
@@ -77,7 +78,7 @@ local function PROFILE.safeHttpRequest(url, method, body)
 end
 
 -- Fetch avatar URL from server with Enhanced Error Handling
-local function PROFILE.getAvatarFromAPI(discordID)
+function PROFILE.getAvatarFromAPI(discordID)
     if not discordID or type(discordID) ~= "string" then
         log("Invalid Discord ID provided", CONFIG.LOG_LEVEL.ERROR)
         return nil
@@ -107,7 +108,7 @@ local function PROFILE.getAvatarFromAPI(discordID)
     end
 end
 
-local function PROFILE.LoadDiscordProfilePicture(discordID, size)
+function PROFILE.LoadDiscordProfilePicture(discordID, size)
     size = math.max(16, math.min(size or 512, 2048))
     
     local FileParent = "seraph.script/profile"
@@ -170,7 +171,7 @@ local function PROFILE.LoadDiscordProfilePicture(discordID, size)
     return imageAsset or defaultImagePath
 end
 
-local function PROFILE.displayDiscordProfilePicture(discordID)
+function PROFILE.displayDiscordProfilePicture(discordID)
     local profilePicture = PROFILE.LoadDiscordProfilePicture(discordID)
     
     if not profilePicture then
