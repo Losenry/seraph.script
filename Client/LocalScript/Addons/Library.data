@@ -39,6 +39,9 @@ local S3R3N1TY_T4BL3 = {
 
     -- @ set default icon for profile
     ["DEFAULT ICONIC"] = "906903978460213288";
+
+    -- @ set notify states
+    ["NOTIFICATION"] = true;
 }
 
 return S3R3N1TY_T4BL3
