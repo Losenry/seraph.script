@@ -2,11 +2,11 @@ local S3R3N1TY_T4BL3 = {
 
     -- @ title for set in ui library
     ["TITLE"] = {
-        ["LEFT"] = "";
-        ["RIGHT"] = "";
+        ["LEFT"] = "seraph - script's";
+        ["RIGHT"] = "private access";
 
         -- // Set Name in LocalScripts
-        ["SCRIPTS"] = "";
+        ["SCRIPTS"] = "seraph.scripts";
     };
 
     -- @ color Theme for use as main
@@ -35,8 +35,10 @@ local S3R3N1TY_T4BL3 = {
     ["ONLINE"] = true;
 
     -- @ set left bottom icon
-    ["ASSET ICONIC"] = "";
+    ["ASSET ICONIC"] = "13271392839";
 
+    -- @ set default icon for profile
+    ["DEFAULT ICONIC"] = "906903978460213288";
 }
 
 return S3R3N1TY_T4BL3
