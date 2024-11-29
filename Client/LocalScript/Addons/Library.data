@@ -42,6 +42,9 @@ local S3R3N1TY_T4BL3 = {
 
     -- @ set notify states
     ["NOTIFICATION"] = true;
+
+    -- @ set draggble states
+    ["DRAGGABLE"] = true;
 }
 
 return S3R3N1TY_T4BL3
