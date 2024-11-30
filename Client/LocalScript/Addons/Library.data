@@ -2,7 +2,7 @@ local S3R3N1TY_T4BL3 = {
 
     -- @ title for set in ui library
     ["TITLE"] = {
-        ["LEFT"] = "serenity - script's";
+        ["LEFT"] = "seraph - script's";
         ["RIGHT"] = "private access";
 
         -- // Set Name in LocalScripts
