@@ -3,7 +3,7 @@ local S3R3N1TY_T4BL3 = {
     -- @ title for set in ui library
     ["TITLE"] = {
         ["LEFT"] = "seraph - script's";
-        ["RIGHT"] = "private access";
+        ["RIGHT"] = "development version";
 
         -- // Set Name in LocalScripts
         ["SCRIPTS"] = "seraph.scripts";
