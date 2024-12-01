@@ -12,8 +12,8 @@ local S3R3N1TY_T4BL3 = {
     -- @ color Theme for use as main
     ["COLOR"] = {
         ["MAIN"] = {
-            ["1"] = Color3.fromRGB(187, 85, 251);
-            ["2"] = Color3.fromRGB(102, 51, 153);
+            ["1"] = Color3.fromRGB(173, 95, 251);
+            ["2"] = Color3.fromRGB(73, 0, 147);
         };
 
         -- // Other Themes
@@ -46,5 +46,6 @@ local S3R3N1TY_T4BL3 = {
     -- @ set draggble states
     ["DRAGGABLE"] = false;
 }
+
 
 return S3R3N1TY_T4BL3
