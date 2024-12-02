@@ -12,10 +12,8 @@ local S3R3N1TY_T4BL3 = {
     -- @ color Theme for use as main
     ["COLOR"] = {
         ["MAIN"] = {
-            ["1"] = Color3.fromRGB(255,0,127);
-            ["2"] = Color3.fromRGB(58,0,29);
-            --["1"] = Color3.fromRGB(173, 95, 251);
-            --["2"] = Color3.fromRGB(73, 0, 147);
+            ["1"] = Color3.fromRGB(173, 95, 251);
+            ["2"] = Color3.fromRGB(73, 0, 147);
         };
 
         -- // Other Themes
