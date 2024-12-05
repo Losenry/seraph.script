@@ -38,7 +38,7 @@ local S3R3N1TY_T4BL3 = {
     ["ASSET ICONIC"] = "130516554311911";
 
     -- @ set default icon for profile
-    ["DEFAULT ICONIC"] = "906903978460213288";
+    ["DEFAULT ICONIC"] = "1056216310373154837";
 
     -- @ set notify states
     ["NOTIFICATION"] = true;
