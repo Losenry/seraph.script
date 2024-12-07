@@ -1,2 +1,2 @@
 local checked = (...)
-print(checked)
+if typeof(checked) == 'table' then for _,v in pairs(checked) return v end
