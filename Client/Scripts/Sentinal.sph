@@ -1,2 +1,2 @@
-local checked = ({...})[1]
+local checked = (...)[1]
 print(checked)
