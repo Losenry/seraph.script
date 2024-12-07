@@ -1,0 +1,2 @@
+local checked = ({...})[1]
+print(checked)
