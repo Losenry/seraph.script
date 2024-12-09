@@ -1,2 +1,0 @@
-local checked = (...)
-if typeof(checked) == 'table' then for _,v in pairs(checked) do return v end end
