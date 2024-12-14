@@ -13,7 +13,7 @@ local S3R3N1TY_T4BL3 = {
     ["COLOR"] = {
         ["MAIN"] = {
             ["1"] = Color3.fromRGB(153, 153, 255);
-            ["2"] = Color3.fromRGB(41, 48, 167;
+            ["2"] = Color3.fromRGB(41, 48, 167);
         };
         
         -- // Other Themes
@@ -27,7 +27,7 @@ local S3R3N1TY_T4BL3 = {
         };
         ["S3R4PH"] = {
             ["1"] = Color3.fromRGB(153, 153, 255);
-            ["2"] = Color3.fromRGB(41, 48, 167;
+            ["2"] = Color3.fromRGB(41, 48, 167);
         };
         ["S3R3N1TY"] = {
             ["1"] = Color3.fromRGB(173, 95, 251);
