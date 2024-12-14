@@ -12,10 +12,10 @@ local S3R3N1TY_T4BL3 = {
     -- @ color Theme for use as main
     ["COLOR"] = {
         ["MAIN"] = {
-            ["1"] = Color3.fromRGB(173, 95, 251);
-            ["2"] = Color3.fromRGB(73, 0, 147);
+            ["1"] = Color3.fromRGB(153, 153, 255);
+            ["2"] = Color3.fromRGB(41, 48, 167;
         };
-
+        
         -- // Other Themes
         ["AP0C4LYP2E"] = {
             ["1"] = Color3.fromRGB(255,0,127);
@@ -26,6 +26,10 @@ local S3R3N1TY_T4BL3 = {
             ["2"] = Color3.fromRGB(132, 96, 48);
         };
         ["S3R4PH"] = {
+            ["1"] = Color3.fromRGB(153, 153, 255);
+            ["2"] = Color3.fromRGB(41, 48, 167;
+        };
+        ["S3R3N1TY"] = {
             ["1"] = Color3.fromRGB(173, 95, 251);
             ["2"] = Color3.fromRGB(138,43,226);
         };
