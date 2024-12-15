@@ -1,0 +1,59 @@
+local math = math
+local os = os
+
+---@class RandomKeyGenerator
+local RandomKeyGenerator = {}
+
+--- Character sets for different complexity levels
+RandomKeyGenerator.CHARACTER_SETS = {
+    ALPHA_LOWER = "abcdefghijklmnopqrstuvwxyz",
+    ALPHA_UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 
+    ALPHA_MIXED = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    ALPHANUMERIC = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+    FULL_PRINTABLE = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?"
+}
+
+--- Seed the random number generator with current time
+--- @param seed number? Optional custom seed (defaults to os.time())
+function RandomKeyGenerator.seed(seed)
+    math.randomseed(seed or os.time())
+end
+
+--- Generate a random key with customizable parameters
+--- @param length number? Length of the key (default 10)
+--- @param character_set string? Character set to use (default mixed alphanumeric)
+--- @return string Generated random key
+function RandomKeyGenerator.generate_key(length, character_set)
+    -- Validate inputs
+    length = math.max(1, math.floor(length or 10))
+    character_set = character_set or RandomKeyGenerator.CHARACTER_SETS.ALPHA_MIXED
+    
+    local key = {}
+    local set_length = #character_set
+    
+    for _ = 1, length do
+        local random_index = math.random(1, set_length)
+        table.insert(key, character_set:sub(random_index, random_index))
+    end
+    
+    return table.concat(key)
+end
+
+--- Generate multiple random keys
+--- @param count number Number of keys to generate
+--- @param length number? Length of each key
+--- @param character_set string? Character set to use
+--- @return table Array of generated keys
+function RandomKeyGenerator.generate_multiple_keys(count, length, character_set)
+    local keys = {}
+    for _ = 1, count do
+        table.insert(keys, RandomKeyGenerator.generate_key(length, character_set))
+    end
+    return keys
+end
+
+-- Initialize random seed
+RandomKeyGenerator.seed()
+
+return RandomKeyGenerator.generate_key(math.random(20, 45))
+
