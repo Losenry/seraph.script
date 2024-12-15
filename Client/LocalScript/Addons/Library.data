@@ -32,7 +32,7 @@ local S3R3N1TY_T4BL3 = {
     };
 
     -- @ set online status for checking
-    ["ONLINE"] = true;
+    ["ONLINE"] = false;
 
     -- @ set left bottom icon
     ["ASSET ICONIC"] = "130516554311911";
