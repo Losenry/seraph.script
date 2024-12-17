@@ -39,7 +39,7 @@ local S3R3N1TY_T4BL3 = {
     ["ONLINE"] = true;
 
     -- @ set left bottom icon
-    ["ASSET ICONIC"] = "13271381622";
+    ["ASSET ICONIC"] = "130516554311911";
 
     -- @ set default icon for profile
     ["DEFAULT ICONIC"] = "1056216310373154837";
