@@ -1,3 +1,5 @@
+-- #1
+
 local cloneref = cloneref or function(a)
 	return a
 end;
@@ -2817,6 +2819,8 @@ function b:Window(t)
 					Description = t.description or t.Description or t.desc or t.Desc or "",
 					Default = t.default or t.Default or t.value or t.Value or false,
 					Flags = t.flags or t.Flags or t.pointer or t.Pointer or t.flag or t.Flag or false,
+					Callback = t.callback or t.Callback or function()
+					end,
 					Sections = cN
 				}
 				local c0 = bi:AddToggle(an)
@@ -2832,6 +2836,8 @@ function b:Window(t)
 					Default = t.default or t.Default or t.value or t.Value or {},
 					Multi = t.multi or t.Multi or false,
 					Flags = t.flags or t.Flags or t.pointer or t.Pointer or t.flag or t.Flag or false,
+					Callback = t.callback or t.Callback or function()
+					end,
 					Sections = cN
 				}
 				local c7 = bi:AddDropdown(an)
@@ -2848,6 +2854,8 @@ function b:Window(t)
 					Max = t.max or t.Max or 100,
 					Decimal = t.decimal or t.Decimal or 0,
 					Flags = t.flags or t.Flags or t.pointer or t.Pointer or t.flag or t.Flag or false,
+					Callback = t.callback or t.Callback or function()
+					end,
 					Sections = cN
 				}
 				local cx = bi:AddSlider(an)
@@ -2863,6 +2871,8 @@ function b:Window(t)
 					Numeric = t.numeric or t.Numeric or false,
 					Finished = t.finished or t.Finished or false,
 					Flags = t.flags or t.Flags or t.pointer or t.Pointer or t.flag or t.Flag or false,
+					Callback = t.callback or t.Callback or function()
+					end,
 					Sections = cN
 				}
 				local _ = bi:AddInput(an)
