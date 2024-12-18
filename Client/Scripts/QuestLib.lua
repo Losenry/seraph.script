@@ -37,12 +37,12 @@ local AllQuest = {
     {1775,"Turtle Adventure Quest Giver"};
     {1825,"Deep Forest Quest Giver"}; -- 30
     {1900,"Deep Forest Area 2 Quest Giver"};
-	{1975,"Haunted Castle Quest Giver 1"};
+    {1975,"Haunted Castle Quest Giver 1"};
     {2025,"Haunted Castle Quest Giver 2"};
-	{2075,"Peanut Quest Giver"};
-	{2125,"Ice Cream Quest Giver"};
-	{2200,"Cake Quest Giver 1"};
-	{2250,"Cake Quest Giver 2"};
+    {2075,"Peanut Quest Giver"};
+    {2125,"Ice Cream Quest Giver"};
+    {2200,"Cake Quest Giver 1"};
+    {2250,"Cake Quest Giver 2"};
     {2300,"Choc Quest Giver 1"};
     {2350,"Choc Quest Giver 2"};
     {2400,"Candy Quest Giver 1"};
