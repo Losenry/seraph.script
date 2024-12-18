@@ -6,7 +6,7 @@ local AllQuest = {
     {90,"Villager"};
     {120,"Marine"}; -- 6
     {150,"Sky Adventurer"};
-	{190,"Jail Keeper"};
+    {190,"Jail Keeper"};
     {250,"Colosseum Quest GIver"};
     {300,"The Mayor"}; -- 9
     {375,"King Neptune"};
