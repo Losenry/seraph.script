@@ -2,11 +2,12 @@ local Themes = {
 	Presets = {
 		["Default"] = {
 			COLOR_1 = Color3.fromRGB(153, 153, 255);
-			COLOR_2 = Color3.fromRGB(41, 48, 167)
+			COLOR_2 = Color3.fromRGB(41, 48, 167);
 		};
 		["Navy"] = {
 			COLOR_1 = Color3.fromRGB(130, 174, 255);
-			COLOR_2 = Color3.fromRGB(80, 120, 200)
+			COLOR_2 = Color3.fromRGB(80, 120, 200);
+            COLOR_TEXT = Color3.fromRGB(0, 0, 0);
 		};
 		["Magenta"] = {
 			COLOR_1 = Color3.fromRGB(200, 75, 150);
