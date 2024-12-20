@@ -235,3 +235,4 @@ end
 function ServerFunc:Rejoin()
     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,game.JobId, game:GetService("Players").LocalPlayer)
 end
+return ServerFunc
