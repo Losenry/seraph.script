@@ -1,0 +1,193 @@
+-- @ Path / ReplicatedStorage.modules.library.items
+
+-- [[ SOURCE ]] --
+
+
+local v2 = {
+    Items = {
+        ["Crab Cage"] = {
+            Rarity = "Unusual", 
+            Price = 45
+        }, 
+        Firework = {
+            Rarity = "Limited", 
+            Price = 130
+        }, 
+        ["Conception Conch"] = {
+            Rarity = "Mythical", 
+            Price = 444
+        }, 
+        Glider = {
+            Rarity = "Rare", 
+            Price = 900, 
+            OnlyBuyOne = true
+        }, 
+        ["Fish Radar"] = {
+            Rarity = "Legendary", 
+            Icon = "rbxassetid://132119413174655", 
+            Price = 8000, 
+            OnlyBuyOne = true
+        }, 
+        GPS = {
+            Rarity = "Uncommon", 
+            Icon = "rbxassetid://92660360174055", 
+            Price = 100, 
+            OnlyBuyOne = true
+        }, 
+        ["Tempest Totem"] = {
+            Rarity = "Rare", 
+            Price = 2000
+        }, 
+        ["Windset Totem"] = {
+            Rarity = "Rare", 
+            Price = 2000
+        }, 
+        ["Sundial Totem"] = {
+            Rarity = "Rare", 
+            Price = 2000
+        }, 
+        ["Smokescreen Totem"] = {
+            Rarity = "Rare", 
+            Price = 2000
+        }, 
+        ["Aurora Totem"] = {
+            Rarity = "Mythical", 
+            Price = 500000
+        }, 
+        ["Meteor Totem"] = {
+            Rarity = "Legendary", 
+            Price = 75000
+        }, 
+        ["Eclipse Totem"] = {
+            Rarity = "Mythical", 
+            Price = 250000
+        }, 
+        ["Witches Ingredient"] = {
+            Rarity = "Rare", 
+            Price = 10000
+        }, 
+        ["Basic Diving Gear"] = {
+            Rarity = "Uncommon", 
+            Price = 3000, 
+            OnlyBuyOne = true
+        }, 
+        ["Advanced Diving Gear"] = {
+            Rarity = "Unusual", 
+            Price = 15000, 
+            OnlyBuyOne = true
+        }, 
+        Flippers = {
+            Rarity = "Unusual", 
+            Price = 9000, 
+            OnlyBuyOne = true
+        }, 
+        ["Super Flippers"] = {
+            Rarity = "Legendary", 
+            Price = 30000, 
+            OnlyBuyOne = true
+        }, 
+        Tidebreaker = {
+            Rarity = "Mythical", 
+            Price = 80000, 
+            OnlyBuyOne = true
+        }, 
+        ["Ancient Thread"] = {
+            Rarity = "Exotic", 
+            SellValue = 700, 
+            Price = 1e999
+        }, 
+        ["Magic Thread"] = {
+            Rarity = "Exotic", 
+            SellValue = 250, 
+            Price = 1e999
+        }, 
+        ["Lunar Thread"] = {
+            Rarity = "Exotic", 
+            SellValue = 1250, 
+            Price = 1e999
+        }, 
+        Nuke = {
+            Rarity = "Exotic", 
+            Price = 1e999
+        }, 
+        Fillionaire = {
+            Rarity = "Exotic", 
+            Price = 1e999
+        }, 
+        ["Treasure Map"] = {
+            Rarity = "Exotic", 
+            Price = 1e999
+        }, 
+        ["Handwritten Note"] = {
+            Rarity = "Exotic", 
+            Price = 1e999
+        }, 
+        ["Regular Token"] = {
+            Rarity = "Exotic", 
+            Price = 1e999
+        }, 
+        ["Elite Token"] = {
+            Rarity = "Exotic", 
+            Price = 1e999
+        }, 
+        ["Bag of Presents"] = {
+            Rarity = "Exotic", 
+            Price = 1e999
+        }, 
+        ["Skin Crate"] = {
+            Rarity = "Exotic", 
+            Price = 1e999
+        }
+    }, 
+    Rarities = {
+        [1] = "Trash", 
+        [2] = "Common", 
+        [3] = "Uncommon", 
+        [4] = "Unusual", 
+        [5] = "Rare", 
+        [6] = "Legendary", 
+        [7] = "Mythical", 
+        [8] = "Exotic", 
+        [9] = "Limited", 
+        [10] = "Developer"
+    }, 
+    RarityColours = {
+        Trash = Color3.fromRGB(145, 145, 145), 
+        Common = Color3.fromRGB(142, 187, 191), 
+        Uncommon = Color3.fromRGB(161, 255, 169), 
+        Unusual = Color3.fromRGB(192, 135, 198), 
+        Rare = Color3.fromRGB(119, 108, 181), 
+        Legendary = Color3.fromRGB(240, 181, 109), 
+        Mythical = Color3.fromRGB(255, 62, 120), 
+        Exotic = Color3.fromRGB(255, 255, 255), 
+        Limited = Color3.fromRGB(255, 130, 57), 
+        Extinct = Color3.fromRGB(54, 73, 159), 
+        Relic = Color3.fromRGB(120, 255, 183)
+    }, 
+    ToInteger = function(_, v1) --[[ Line: 201 ]] --[[ Name: ToInteger ]]
+        return math.floor(v1.r * 255) * 65536 + math.floor(v1.g * 255) * 256 + math.floor(v1.b * 255);
+    end
+};
+v2.ToHex = function(_, v4) --[[ Line: 205 ]] --[[ Name: ToHex ]]
+    local v5 = v2:ToInteger(v4);
+    local v6 = "";
+    local v7 = {
+        "A", 
+        "B", 
+        "C", 
+        "D", 
+        "E", 
+        "F"
+    };
+    repeat
+        local v8 = v5 % 16;
+        local v9 = tostring(v8);
+        if v8 >= 10 then
+            v9 = v7[1 + v8 - 10];
+        end;
+        v5 = math.floor(v5 / 16);
+        v6 = v6 .. v9;
+    until v5 <= 0;
+    return "#" .. string.reverse(v6);
+end;
+return v2;
