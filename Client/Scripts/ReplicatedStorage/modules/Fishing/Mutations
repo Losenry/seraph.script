@@ -1,0 +1,1144 @@
+-- @ Path / ReplicatedStorage.modules.fishing.mutations
+
+-- [[ SOURCE ]] --
+local v0 = {};
+local l_fish_0 = require(game:GetService("ReplicatedStorage"):WaitForChild("modules"):WaitForChild("library"):WaitForChild("fish"));
+local l_Players_0 = game:GetService("Players");
+v0.Mutations = {
+    Albino = {
+        PriceMultiply = 1.1, 
+        Chance = 30, 
+        Display = "Albino", 
+        Color = Color3.fromRGB(252, 254, 255)
+    }, 
+    Darkened = {
+        PriceMultiply = 1.3, 
+        Chance = 30, 
+        Display = "Darkened", 
+        Color = Color3.fromRGB(58, 61, 62)
+    }, 
+    Electric = {
+        PriceMultiply = 1.45, 
+        Chance = 15, 
+        Display = "Electric", 
+        Color = Color3.fromRGB(255, 245, 99)
+    }, 
+    Glossy = {
+        PriceMultiply = 1.6, 
+        Chance = 25, 
+        Display = "Glossy", 
+        Color = Color3.fromRGB(146, 226, 255)
+    }, 
+    Midas = {
+        PriceMultiply = 2, 
+        Chance = 3, 
+        Display = "Midas", 
+        Color = Color3.fromRGB(255, 154, 71)
+    }, 
+    Silver = {
+        PriceMultiply = 1.6, 
+        Chance = 15, 
+        Display = "Silver", 
+        Color = Color3.fromRGB(206, 238, 255)
+    }, 
+    Translucent = {
+        PriceMultiply = 1.3, 
+        Chance = 20, 
+        Display = "Translucent", 
+        Color = Color3.fromRGB(135, 255, 191)
+    }, 
+    Negative = {
+        PriceMultiply = 1.3, 
+        Chance = 30, 
+        Display = "Negative", 
+        Color = Color3.fromRGB(117, 103, 226)
+    }, 
+    Mythical = {
+        PriceMultiply = 4.5, 
+        Chance = 1, 
+        Display = "Mythical", 
+        Color = Color3.fromRGB(255, 82, 148)
+    }, 
+    Frozen = {
+        PriceMultiply = 1.3, 
+        Chance = 10, 
+        Display = "Frozen", 
+        Color = Color3.fromRGB(131, 255, 230)
+    }, 
+    Atlantean = {
+        PriceMultiply = 3, 
+        Chance = 0, 
+        Display = "Atlantean", 
+        Color = Color3.fromRGB(34, 153, 149)
+    }, 
+    Mosaic = {
+        PriceMultiply = 1.5, 
+        Chance = 10, 
+        Display = "Mosaic", 
+        Color = Color3.fromRGB(251, 193, 255)
+    }, 
+    Aurora = {
+        PriceMultiply = 6.5, 
+        Chance = 0, 
+        Display = "Aurora", 
+        Color = Color3.fromRGB(78, 255, 217)
+    }, 
+    Nuclear = {
+        PriceMultiply = 4, 
+        Chance = 0, 
+        Display = "Nuclear", 
+        Color = Color3.fromRGB(0, 255, 0)
+    }, 
+    Hexed = {
+        PriceMultiply = 1.5, 
+        Chance = 15, 
+        Display = "Hexed", 
+        Color = Color3.fromRGB(166, 0, 0)
+    }, 
+    Sunken = {
+        PriceMultiply = 4, 
+        Chance = 0, 
+        Display = "Sunken", 
+        Color = Color3.fromRGB(23, 93, 255)
+    }, 
+    Greedy = {
+        PriceMultiply = 4, 
+        Chance = 1.5, 
+        Display = "Greedy", 
+        Color = Color3.fromRGB(255, 194, 38)
+    }, 
+    Lunar = {
+        PriceMultiply = 2.5, 
+        Chance = 20, 
+        Display = "Lunar", 
+        Color = Color3.fromRGB(189, 169, 255)
+    }, 
+    Abyssal = {
+        SpecificZones = {
+            "The Depths"
+        }, 
+        PriceMultiply = 1, 
+        Chance = 5, 
+        Display = "Abyssal", 
+        Color = Color3.fromRGB(12, 15, 212)
+    }, 
+    Solarblaze = {
+        PriceMultiply = 2.5, 
+        Chance = 0, 
+        Display = "Solarblaze", 
+        Color = Color3.fromRGB(255, 106, 0)
+    }, 
+    Celestial = {
+        PriceMultiply = 2, 
+        Chance = 0, 
+        Display = "Celestial", 
+        Color = Color3.fromRGB(255, 226, 108)
+    }, 
+    Fossilized = {
+        PriceMultiply = 2.5, 
+        Chance = 4, 
+        Display = "Fossilized", 
+        Color = Color3.fromRGB(208, 181, 255)
+    }, 
+    Amber = {
+        SpecificZones = {
+            "Ancient Isles"
+        }, 
+        PriceMultiply = 0.5, 
+        Chance = 8, 
+        Display = "Amber", 
+        Color = Color3.fromRGB(255, 116, 51)
+    }, 
+    Scorched = {
+        PriceMultiply = 1.3, 
+        Chance = 9, 
+        Display = "Scorched", 
+        Color = Color3.fromRGB(71, 30, 17)
+    }, 
+    Purified = {
+        PriceMultiply = 2, 
+        Chance = 0, 
+        Display = "Purified", 
+        Color = Color3.fromRGB(110, 255, 120)
+    }, 
+    Revitalized = {
+        PriceMultiply = 4, 
+        Chance = 0, 
+        Display = "Revitalized", 
+        Color = Color3.fromRGB(164, 255, 170)
+    }, 
+    Seasonal = {
+        PriceMultiply = 1.3, 
+        Chance = 0, 
+        Display = "Seasonal", 
+        Color = Color3.fromRGB(225, 37, 37)
+    }, 
+    Sandy = {
+        PriceMultiply = 1.2, 
+        Chance = 0, 
+        Display = "Sandy", 
+        Color = Color3.fromRGB(255, 195, 161)
+    }, 
+    Blessed = {
+        PriceMultiply = 10, 
+        Chance = 0, 
+        Display = "Blessed", 
+        Color = Color3.fromRGB(255, 230, 105)
+    }, 
+    Unsellable = {
+        PriceMultiply = 0, 
+        Chance = 0, 
+        Display = "Unsellable", 
+        Color = Color3.fromRGB(255, 76, 76)
+    }, 
+    Subspace = {
+        PriceMultiply = 5, 
+        Chance = 0, 
+        Display = "Subspace", 
+        Color = Color3.fromRGB(255, 0, 200)
+    }, 
+    Anomalous = {
+        PriceMultiply = 1, 
+        Chance = 0, 
+        Display = "Anomalous", 
+        Color = Color3.fromRGB(255, 43, 43)
+    }, 
+    Sinister = {
+        PriceMultiply = 1.9, 
+        Chance = 0, 
+        Display = "Sinister", 
+        Color = Color3.fromRGB(200, 88, 44)
+    }, 
+    Ghastly = {
+        PriceMultiply = 2, 
+        Chance = 0, 
+        Display = "Ghastly", 
+        Color = Color3.fromRGB(97, 255, 94)
+    }, 
+    Jolly = {
+        PriceMultiply = 1.2, 
+        Chance = 20, 
+        Display = "Jolly", 
+        Color = Color3.fromRGB(16, 94, 19)
+    }, 
+    Festive = {
+        PriceMultiply = 1.4, 
+        Chance = 15, 
+        Display = "Festive", 
+        Color = Color3.fromRGB(255, 124, 124)
+    }, 
+    Minty = {
+        PriceMultiply = 2.2, 
+        Chance = 5, 
+        Display = "Minty", 
+        Color = Color3.fromRGB(128, 255, 185)
+    }
+};
+local v3 = 1;
+local v4 = 1;
+local v5 = 1;
+local v6 = 0;
+game:GetService("RunService").Heartbeat:Connect(function(_) --[[ Line: 254 ]]
+    v6 = v6 + 1;
+    v3 = math.sin(v6 * 0.025) / 6 + 0.8;
+    v4 = math.sin(v6 * 0.025) / 2 + 0.5;
+    v5 = math.sin(v6 * 0.025) / 4.5 + 0.5;
+end);
+local v8 = {};
+local v9 = {};
+if game:GetService("RunService"):IsServer() then
+    l_Players_0.PlayerAdded:Connect(function(v10) --[[ Line: 265 ]]
+        local v11 = v10:WaitForChild("DoneLoading", 30);
+        if v11 and v11.Value == false then
+            v11.Changed:Wait();
+        end;
+        for v12, v13 in v8 do
+            if v12 and v12.Parent then
+                if not v11.Value then
+                    repeat
+                        wait();
+                    until v11.Value == true;
+                end;
+                game.ReplicatedStorage.events.fishMutation:FireClient(v10, v12, v13);
+            end;
+        end;
+    end);
+end;
+v0.MutateModel = function(_, v15, v16) --[[ Line: 284 ]] --[[ Name: MutateModel ]]
+    if not v15 then
+        return;
+    else
+        if v0.Mutations[v16] then
+            if v16 == "Albino" then
+                for _, v18 in pairs(v15:GetDescendants()) do
+                    if v18:IsA("BasePart") then
+                        local v19, _, _ = Color3.fromRGB(v18.Color.R, v18.Color.G, v18.Color.B):ToHSV();
+                        if v18.Name ~= "Eyes" then
+                            v19 = math.clamp(1 - v19, 0.6, 1);
+                            v18.Color = Color3.new(v19, v19, v19);
+                        else
+                            v19 = math.clamp(1 - v19, 0.6, 1);
+                            v18.Color = Color3.new(v19, v19, v19);
+                        end;
+                    end;
+                end;
+            elseif v16 == "Midas" then
+                for _, v23 in pairs(v15:GetDescendants()) do
+                    if v23:IsA("BasePart") then
+                        local v24, _, _ = Color3.fromRGB(v23.Color.R, v23.Color.G, v23.Color.B):ToHSV();
+                        if v23.Name ~= "Eyes" then
+                            v24 = math.clamp(v24 * 250, 0, 50);
+                            v23.Color = Color3.fromRGB(250 - v24, 185 - v24, 73 - v24);
+                            if v23.Material ~= Enum.Material.Neon then
+                                v23.Material = Enum.Material.Metal;
+                            end;
+                        end;
+                    end;
+                end;
+            elseif v16 == "Sinister" then
+                for _, v28 in pairs(v15:GetDescendants()) do
+                    if v28:IsA("BasePart") then
+                        local v29, _, _ = Color3.fromRGB(v28.Color.R, v28.Color.G, v28.Color.B):ToHSV();
+                        if v28.Name ~= "Eyes" then
+                            v29 = math.clamp(v29 * 250, 0, 50);
+                            v28.Color = Color3.fromRGB(122 - v29, 122 - v29, 114 - v29);
+                            if v28.Material ~= Enum.Material.Neon then
+                                v28.Material = Enum.Material.Granite;
+                            end;
+                        end;
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _, v33 = v15.Parent:GetBoundingBox();
+                    local v34 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("sinistertemplate"):Clone();
+                    v34.Size = v33;
+                    v34.weld.Part1 = v34;
+                    v34.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_0 = v34.weld;
+                    l_weld_0.C0 = l_weld_0.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v34.Parent = v15;
+                end;
+            elseif v16 == "Ghastly" then
+                for _, v37 in pairs(v15:GetDescendants()) do
+                    if v37:IsA("BasePart") then
+                        local v38, _, _ = Color3.fromRGB(v37.Color.R, v37.Color.G, v37.Color.B):ToHSV();
+                        if v37.Name ~= "Eyes" then
+                            v38 = math.clamp(v38 * 250, 0, 50);
+                            v37.Color = Color3.fromRGB(97 - v38, 255 - v38, 94 - v38);
+                            v37.Material = Enum.Material.Neon;
+                            v37.Transparency = 0.7;
+                        end;
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _, v42 = v15.Parent:GetBoundingBox();
+                    local v43 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("ghastlytemplate"):Clone();
+                    v43.Size = v42;
+                    v43.weld.Part1 = v43;
+                    v43.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_1 = v43.weld;
+                    l_weld_1.C0 = l_weld_1.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v43.Parent = v15;
+                end;
+            elseif v16 == "Jolly" then
+                local v45 = {
+                    [1] = Color3.fromRGB(255, 46, 46), 
+                    [2] = Color3.fromRGB(255, 221, 48), 
+                    [3] = Color3.fromRGB(58, 255, 44), 
+                    [4] = Color3.fromRGB(51, 167, 255)
+                };
+                local v46 = Color3.fromRGB(21, 75, 18);
+                for _, v48 in pairs(v15:GetDescendants()) do
+                    if v48:IsA("BasePart") and v48.Transparency ~= 1 and v48.Name ~= "Eyes" then
+                        local v49 = v48.Size.X + v48.Size.Y + v48.Size.Z + v48.Color.R + v48.Color.G + v48.Color.B + v15:GetScale();
+                        local v50 = (v48.Size.X + v48.Size.Y + v48.Size.Z) * v48.Size.Unit.Magnitude ^ v48.Size.Magnitude;
+                        local _, _, _ = v48.Color:ToHSV();
+                        if Random.new(v49):NextInteger(0, 5) <= 2 then
+                            local _ = nil;
+                            local v55, v56, v57 = (if Random.new((v48.Size.X + v48.Size.Y + v48.Size.Z) * v48.Size.Unit.Magnitude ^ Random.new(v50):NextNumber(0, 10)):NextInteger(0, 3) <= 1 then v45[1] else v45[Random.new(v50 * 414):NextInteger(1, #v45)]):ToHSV();
+                            v48.Color = Color3.fromHSV(v55, math.clamp(v56 * Random.new(v49):NextNumber(0.9, 1.1), 0, 1), (math.clamp(v57 * Random.new(v49):NextNumber(0.95, 1.05), 0, 1)));
+                            v48.Material = Enum.Material.Neon;
+                        else
+                            local v58, v59, v60 = v46:ToHSV();
+                            v48.Color = Color3.fromHSV(v58, math.clamp(v59 * Random.new(v49):NextNumber(0.9, 1.1), 0, 1), (math.clamp(v60 * Random.new(v49):NextNumber(0.95, 1.05), 0, 1)));
+                            v48.Material = Enum.Material.Grass;
+                        end;
+                    end;
+                end;
+            elseif v16 == "Festive" then
+                local v61 = Color3.fromRGB(238, 0, 0);
+                local v62 = Color3.fromRGB(238, 227, 227);
+                for _, v64 in pairs(v15:GetDescendants()) do
+                    if v64:IsA("BasePart") and v64.Transparency ~= 1 and v64.Name ~= "Eyes" then
+                        local v65 = v64.Size.X + v64.Size.Y + v64.Size.Z + v64.Color.R + v64.Color.G + v64.Color.B + v15:GetScale();
+                        local _, _, _ = v64.Color:ToHSV();
+                        local v69, v70, v71 = (Random.new(v65):NextInteger(0, 1) == 1 and v61 or v62):ToHSV();
+                        v64.Color = Color3.fromHSV(v69, math.clamp(v70 * Random.new(v65):NextNumber(0.9, 1.1), 0, 1), (math.clamp(v71 * Random.new(v65):NextNumber(0.95, 1.05), 0, 1)));
+                        v64.Material = Enum.Material.Ice;
+                    end;
+                end;
+            elseif v16 == "Minty" then
+                local v72 = Color3.fromRGB(147, 255, 192);
+                local v73 = Color3.fromRGB(80, 255, 159);
+                for _, v75 in pairs(v15:GetDescendants()) do
+                    if v75:IsA("BasePart") and v75.Transparency ~= 1 and v75.Name ~= "Eyes" then
+                        local v76 = v75.Size.X + v75.Size.Y + v75.Size.Z + v75.Color.R + v75.Color.G + v75.Color.B + v15:GetScale();
+                        local _, _, _ = v75.Color:ToHSV();
+                        local v80, v81, v82 = (Random.new(v76):NextInteger(0, 1) == 1 and v72 or v73):ToHSV();
+                        v75.Color = Color3.fromHSV(v80, math.clamp(v81 * Random.new(v76):NextNumber(0.9, 1.1), 0, 1), (math.clamp(v82 * Random.new(v76):NextNumber(0.95, 1.05), 0, 1)));
+                    end;
+                end;
+            elseif v16 == "Glossy" then
+                for _, v84 in pairs(v15:GetDescendants()) do
+                    if v84:IsA("BasePart") then
+                        v84.Material = Enum.Material.Plastic;
+                        v84.Reflectance = 0.7;
+                    end;
+                end;
+            elseif v16 == "Silver" then
+                for _, v86 in pairs(v15:GetDescendants()) do
+                    if v86:IsA("BasePart") then
+                        local v87, _, _ = Color3.fromRGB(v86.Color.R, v86.Color.G, v86.Color.B):ToHSV();
+                        if v86.Name ~= "Eyes" then
+                            v87 = math.clamp(v87 * 250, 0, 50);
+                            v86.Color = Color3.fromRGB(161 - v87, 161 - v87, 170 - v87);
+                            if v86.Material ~= Enum.Material.Neon then
+                                v86.Material = Enum.Material.Metal;
+                            end;
+                        end;
+                    end;
+                end;
+            elseif v16 == "Darkened" then
+                for _, v91 in pairs(v15:GetDescendants()) do
+                    if v91:IsA("BasePart") then
+                        local v92, _, _ = Color3.fromRGB(v91.Color.R, v91.Color.G, v91.Color.B):ToHSV();
+                        v92 = math.clamp(v92 * 100, 0, 45);
+                        v91.Color = Color3.fromRGB(45 - v92, 45 - v92, 45 - v92);
+                    end;
+                end;
+            elseif v16 == "Translucent" then
+                for _, v96 in pairs(v15:GetDescendants()) do
+                    if v96:IsA("BasePart") then
+                        v96.Transparency = 0.7;
+                    end;
+                end;
+                if v16 == "Translucent" and v15.Parent then
+                    if v15.Parent:FindFirstChild("handle") then
+                        script:WaitForChild("translucent_script"):Clone().Parent = v15.Parent:FindFirstChild("handle");
+                    elseif v15.Parent:FindFirstChild("center") then
+                        script:WaitForChild("translucent_script"):Clone().Parent = v15.Parent:FindFirstChild("center");
+                    end;
+                end;
+            elseif v16 == "Negative" then
+                for _, v98 in pairs(v15:GetDescendants()) do
+                    if v98:IsA("BasePart") then
+                        local v99 = Color3.new(v98.Color.R, v98.Color.G, v98.Color.B);
+                        local v100 = 1 - v99.R;
+                        local v101 = 1 - v99.G;
+                        local v102 = 1 - v99.B;
+                        if v98.Name ~= "Eyes" then
+                            v98.Color = Color3.new(v100, v101, v102);
+                        end;
+                    end;
+                end;
+            elseif v16 == "Atlantean" then
+                for _, v104 in pairs(v15:GetDescendants()) do
+                    local v105, _, _ = Color3.fromRGB(34, 153, 149):ToHSV();
+                    if v104:IsA("BasePart") then
+                        local _, v109, v110 = v104.Color:ToHSV();
+                        if v104.Name ~= "Eyes" then
+                            v104.Color = Color3.fromHSV(math.clamp(v105, 0, 1), math.clamp(v109 + 0.2, 0, 1), (math.clamp(v110 * 0.65, 0, 1)));
+                        end;
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _ = v15.Parent.Hitbox.CFrame;
+                    local l_Size_0 = v15.Parent.Hitbox.Size;
+                    l_Size_0 = l_Size_0 + Vector3.new(l_Size_0.X * 1.4, l_Size_0.Y * 1.4, l_Size_0.Z * 1.4);
+                    local v113 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("atlanteantemplate"):Clone();
+                    v113.Size = l_Size_0;
+                    v113.weld.Part1 = v113;
+                    v113.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_2 = v113.weld;
+                    l_weld_2.C0 = l_weld_2.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v113.Parent = v15;
+                end;
+            elseif v16 == "Hexed" then
+                for _, v116 in pairs(v15:GetDescendants()) do
+                    if v116:IsA("BasePart") then
+                        local v117, _, _ = Color3.fromRGB(127, 0, 0):ToHSV();
+                        local _, v121, v122 = v116.Color:ToHSV();
+                        if v116.Name ~= "Eyes" then
+                            v116.Color = Color3.fromHSV(math.clamp(v117, 0, 1), math.clamp(v121 + 0.5, 0, 1), (math.clamp((v122 + 0.05) * 0.75, 0, 1)));
+                            v116.Material = Enum.Material.Metal;
+                        end;
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _ = v15.Parent.Hitbox.CFrame;
+                    local l_Size_1 = v15.Parent.Hitbox.Size;
+                    l_Size_1 = l_Size_1 + Vector3.new(l_Size_1.X * 1.4, l_Size_1.Y * 1.4, l_Size_1.Z * 1.4);
+                    local v125 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("hexedtemplate"):Clone();
+                    v125.Size = l_Size_1;
+                    v125.weld.Part1 = v125;
+                    v125.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_3 = v125.weld;
+                    l_weld_3.C0 = l_weld_3.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v125.Parent = v15;
+                end;
+            elseif v16 == "Purified" then
+                for _, v128 in pairs(v15:GetDescendants()) do
+                    if v128:IsA("BasePart") then
+                        local v129, v130, v131 = v128.Color:ToHSV();
+                        if v128.Name ~= "Eyes" then
+                            v128.Color = Color3.fromHSV(v129, v130, (math.clamp(v131 + 0.1, 0, 1)));
+                        end;
+                    end;
+                end;
+            elseif v16 == "Revitalized" then
+                for _, v133 in pairs(v15:GetDescendants()) do
+                    if v133:IsA("BasePart") then
+                        local v134, v135, v136 = v133.Color:ToHSV();
+                        if v133.Name ~= "Eyes" then
+                            v133.Color = Color3.fromHSV(v134, v135, (math.clamp(v136 + 0.2, 0, 1)));
+                        end;
+                    end;
+                end;
+            elseif v16 == "Seasonal" then
+                local v137 = ({
+                    Spring = {
+                        Material = Enum.Material.Sand, 
+                        Color = Color3.fromRGB(252, 166, 255)
+                    }, 
+                    Summer = {
+                        Material = Enum.Material.Glass, 
+                        Color = Color3.fromRGB(255, 217, 129)
+                    }, 
+                    Autumn = {
+                        Material = Enum.Material.Grass, 
+                        Color = Color3.fromRGB(207, 77, 34)
+                    }, 
+                    Winter = {
+                        Material = Enum.Material.Ice, 
+                        Color = Color3.fromRGB(189, 252, 255)
+                    }
+                })[v15.Parent:GetAttribute("Season") or "Spring"];
+                for _, v139 in pairs(v15:GetDescendants()) do
+                    if v139:IsA("BasePart") and v139.Transparency ~= 1 and v139.Name ~= "Eyes" then
+                        if v139.Material ~= Enum.Material.Neon then
+                            v139.Material = v137.Material;
+                        end;
+                        local v140, v141, v142 = v137.Color:ToHSV();
+                        local v143 = v139.Size.X + v139.Size.Y + v139.Size.Z + v139.Color.R + v139.Color.G + v139.Color.B + v15:GetScale();
+                        local v144 = math.clamp(v140 * Random.new(v143):NextNumber(0.95, 1.05), 0, 1);
+                        local v145 = math.clamp(v141 * Random.new(v143):NextNumber(0.9, 1.1), 0, 1);
+                        local v146 = math.clamp(v142 * Random.new(v143):NextNumber(0.925, 1.075), 0, 1);
+                        v139.Color = Color3.fromHSV(v144, v145, v146);
+                    end;
+                end;
+            elseif v16 == "Sunken" then
+                local v147, _, _ = Color3.fromRGB(34, 53, 66):ToHSV();
+                for _, v151 in pairs(v15:GetDescendants()) do
+                    if v151:IsA("BasePart") then
+                        if v151.Transparency ~= 1 and v151.Name ~= "Eyes" then
+                            if v151.Material == Enum.Material.Neon then
+                                v151.Color = Color3.fromRGB(134, 195, 141);
+                            else
+                                local v152 = v151.Size.X + v151.Size.Y + v151.Size.Z + v151.Color.R + v151.Color.G + v151.Color.B + v15:GetScale();
+                                local _, _, v155 = v151.Color:ToHSV();
+                                local v156 = Random.new(v152):NextNumber(0.1, 0.5) * math.clamp(v155 + 0.5, 0, 1);
+                                v151.Color = Color3.fromHSV(v147, 0, v156);
+                            end;
+                        elseif v151.Name == "Eyes" then
+                            v151.Color = Color3.fromRGB(134, 195, 141);
+                            v151.Material = Enum.Material.Neon;
+                        end;
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _, v158 = v15.Parent:GetBoundingBox();
+                    local v159 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("sunkentemplate"):Clone();
+                    v159.Size = v158;
+                    v159.weld.Part1 = v159;
+                    v159.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_4 = v159.weld;
+                    l_weld_4.C0 = l_weld_4.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v159.Parent = v15;
+                end;
+            elseif v16 == "Mythical" then
+                if game:GetService("RunService"):IsServer() then
+                    v8[v15.Parent] = v16;
+                    for _, v162 in pairs(v15:GetDescendants()) do
+                        if v162:IsA("BasePart") and v162.Name ~= "Eyes" then
+                            v162.Material = Enum.Material.Neon;
+                            local _, v164, v165 = v162.Color:ToHSV();
+                            v162:SetAttribute("ColorS", v164);
+                            v162:SetAttribute("ColorV", v165);
+                        end;
+                    end;
+                    if v15:IsDescendantOf(workspace) then
+                        game.ReplicatedStorage.events.fishMutation:FireAllClients(v15.Parent, v16);
+                    end;
+                else
+                    if v15:IsA("Tool") then
+                        while not v15:FindFirstChild("Fish") and not v15:FindFirstChild("Crate") do
+                            v15.ChildAdded:Wait();
+                        end;
+                        v15 = v15:FindFirstChild("Fish") and v15:FindFirstChild("Fish") or v15:FindFirstChild("Crate");
+                    end;
+                    local v166 = {};
+                    for _, v168 in pairs(v15:GetDescendants()) do
+                        if v168:IsA("BasePart") and v168.Name ~= "Eyes" then
+                            table.insert(v166, v168);
+                        end;
+                    end;
+                    local v169 = nil;
+                    do
+                        local l_v169_0 = v169;
+                        local function v180() --[[ Line: 698 ]] --[[ Name: StartLoop ]]
+                            if v9[v15] then
+                                v9[v15]:Disconnect();
+                            end;
+                            l_v169_0 = game:GetService("RunService").Heartbeat:Connect(function() --[[ Line: 702 ]]
+                                if v15 and v15.Parent and v15.Parent:FindFirstChild("Center") and (v15:IsDescendantOf(workspace) or v15:FindFirstAncestorWhichIsA("ViewportFrame")) then
+                                    local l_Character_0 = game.Players.LocalPlayer.Character;
+                                    if l_Character_0 and l_Character_0:FindFirstChild("HumanoidRootPart") then
+                                        local l_Position_0 = v15.Parent:FindFirstChild("Center").Position;
+                                        local l_Position_1 = l_Character_0.HumanoidRootPart.Position;
+                                        local v174 = Vector3.new(l_Position_1.X // 100, l_Position_1.Y // 100, l_Position_1.Z // 100);
+                                        local v175 = Vector3.new(l_Position_0.X // 100, l_Position_0.Y // 100, l_Position_0.Z // 100);
+                                        if v175.X <= v174.X + 1 and v175.X >= v174.X - 1 and v175.Y <= v174.Y + 1 and v175.Y >= v174.Y - 1 and v175.Z <= v174.Z + 1 and v175.Z >= v174.Z - 1 then
+                                            for _, v177 in v166 do
+                                                if v177 and v177.Parent then
+                                                    local l_v177_Attribute_0 = v177:GetAttribute("ColorS");
+                                                    local l_v177_Attribute_1 = v177:GetAttribute("ColorV");
+                                                    if l_v177_Attribute_0 and l_v177_Attribute_1 then
+                                                        v177.Color = Color3.fromHSV(tick() % 20 / 20, math.clamp(math.min(1, l_v177_Attribute_0 + 0.3 or 1), 0, 1), (math.clamp(math.min(1, l_v177_Attribute_1 + 0.4 or 1), 0, 1)));
+                                                    end;
+                                                end;
+                                            end;
+                                            return;
+                                        end;
+                                    end;
+                                else
+                                    l_v169_0:Disconnect();
+                                end;
+                            end);
+                            v9[v15] = l_v169_0;
+                        end;
+                        v15.AncestryChanged:Connect(function() --[[ Line: 732 ]]
+                            v180();
+                        end);
+                        v180();
+                    end;
+                end;
+            elseif v16 == "Nuclear" then
+                if not v15:IsA("Model") then
+                    return;
+                else
+                    for _, v182 in pairs(v15:GetDescendants()) do
+                        if v182:IsA("BasePart") and v182.Transparency ~= 1 and v182.Name ~= "Eyes" then
+                            v182.Material = Enum.Material.Neon;
+                            local v183 = v182.Size.X + v182.Size.Y + v182.Size.Z + v182.Color.R + v182.Color.G + v182.Color.B + v15:GetScale();
+                            local _, _, v186 = v182.Color:ToHSV();
+                            local v187 = Random.new(v183):NextNumber(0.5, 1) * math.clamp(v186 + 0.5, 0, 1);
+                            v182.Color = Color3.fromHSV(0.333333, 1, v187);
+                            v182:SetAttribute("NuclearHue", 0.333333);
+                            v182:SetAttribute("NuclearSaturation", 1);
+                            v182:SetAttribute("NuclearValue", v187);
+                            local v188 = (v182.Size.X + v182.Size.Y + v182.Size.Z) / 3 * 2;
+                            local v189 = script:WaitForChild("NuclearVFX"):Clone();
+                            v189.Rate = v188;
+                            v189.Size = NumberSequence.new(v188 / 2);
+                            v189.Parent = v182;
+                        end;
+                    end;
+                    if game:GetService("RunService"):IsServer() and v15:IsDescendantOf(workspace) then
+                        game.ReplicatedStorage.events.fishMutation:FireAllClients(v15.Parent, v16);
+                    end;
+                end;
+            elseif v16 == "Mosaic" then
+                for _, v191 in pairs(v15:GetDescendants()) do
+                    if v191:IsA("BasePart") then
+                        local v192 = v191.Size.X + v191.Size.Y + v191.Size.Z + v191.Color.R + v191.Color.G + v191.Color.B + v15:GetScale();
+                        local v193, _, v195 = v191.Color:ToHSV();
+                        if v191.Name ~= "Eyes" then
+                            v191.Color = Color3.fromHSV((v193 + math.noise(v192 * 414)) % 1, 0.35, (math.clamp(v195 + 0.5, 0, 1)));
+                            v191.Material = Enum.Material.Glass;
+                        end;
+                    end;
+                end;
+            elseif v16 == "Aurora" then
+                local v196 = {
+                    0.979, 
+                    0.742, 
+                    0.819
+                };
+                local v197 = {
+                    0.343, 
+                    0.355, 
+                    0.655
+                };
+                local function v204(v198, v199) --[[ Line: 857 ]] --[[ Name: nearest ]]
+                    local v200 = nil;
+                    local v201 = nil;
+                    for v202, v203 in ipairs(v198) do
+                        if not v200 or math.abs(v199 - v203) < v200 then
+                            v200 = math.abs(v199 - v203);
+                            v201 = v202;
+                        end;
+                    end;
+                    return v201, v198[v201];
+                end;
+                local function _(v205) --[[ Line: 868 ]] --[[ Name: customClamp ]]
+                    if v205 < 0 then
+                        return v205 + 1;
+                    elseif v205 > 1 then
+                        return v205 - 1;
+                    else
+                        return v205;
+                    end;
+                end;
+                local v207 = v15:GetScale() * v15:GetScale() + v15:GetBoundingBox().Position.Magnitude;
+                local v208 = Random.new(v207):NextInteger(0, 1) == 1 and v196 or v197;
+                for _, v210 in pairs(v15:GetDescendants()) do
+                    if v210:IsA("BasePart") then
+                        local v211 = v210.Size.X + v210.Size.Y + v210.Size.Z + v210.Color.R + v210.Color.G + v210.Color.B + v15:GetScale();
+                        local v212, _, v214 = v210.Color:ToHSV();
+                        local _, v216 = v204(v208, (v212 + math.noise(v211 * 414)) % 1);
+                        local l_fromHSV_0 = Color3.fromHSV;
+                        local v218 = v216 + Random.new(v211):NextNumber(-0.05, 0.05);
+                        v210.Color = l_fromHSV_0(if v218 < 0 then v218 + 1 else if v218 > 1 then v218 - 1 else v218, 0.4, (math.clamp(math.max(math.min(v214 + 0.25, 0.8), 0.75), 0, 1)));
+                        v210.Material = Enum.Material.Neon;
+                    end;
+                end;
+            elseif v16 == "Greedy" then
+                local v219 = Color3.fromRGB(255, 196, 47);
+                local v220 = Color3.fromRGB(255, 163, 83);
+                for _, v222 in pairs(v15:GetDescendants()) do
+                    if v222:IsA("BasePart") and v222.Transparency ~= 1 and v222.Name ~= "Eyes" then
+                        local v223 = v222.Size.X + v222.Size.Y + v222.Size.Z + v222.Color.R + v222.Color.G + v222.Color.B + v15:GetScale();
+                        local _, _, v226 = v222.Color:ToHSV();
+                        local v227, v228, v229 = v219:ToHSV();
+                        local v230, v231, v232 = v220:ToHSV();
+                        local v233 = Random.new(v223):NextInteger(0, 1);
+                        v222.Material = v233 == 1 and Enum.Material.Metal or Enum.Material.Neon;
+                        local v234 = math.clamp((v233 == 1 and v229 or v232) * Random.new(v223):NextNumber(0.9, 1.1) * math.clamp(v226, 0.9, 1), 0, 1);
+                        v222.Color = Color3.fromHSV(v233 == 1 and v227 or v230, v233 == 1 and v228 or v231, v234);
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("Center") then
+                    game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("greedytemplate"):WaitForChild("GreedyAttachment"):Clone().Parent = v15.Parent:FindFirstChild("Center");
+                end;
+            elseif v16 == "Solarblaze" then
+                for _, v236 in pairs(v15:GetDescendants()) do
+                    if v236:IsA("BasePart") then
+                        if v236.Transparency ~= 1 and v236.Name ~= "Eyes" then
+                            v236.Material = Enum.Material.Neon;
+                            local v237 = v236.Size.X + v236.Size.Y + v236.Size.Z + v236.Color.R + v236.Color.G + v236.Color.B + v15:GetScale();
+                            local _, _, v240 = v236.Color:ToHSV();
+                            local v241 = math.clamp(0.0666667 * Random.new(v237):NextNumber(0.8, 1.2), 0, 1);
+                            local v242 = Random.new(v237):NextNumber(0, 1) * math.clamp(v240 * 1.5, 0, 1);
+                            v236.Color = Color3.fromHSV(v241, 0.9, v242);
+                        elseif v236.Name == "Eyes" then
+                            v236.Material = Enum.Material.Neon;
+                            v236.Color = Color3.fromRGB(255, 136, 0);
+                        end;
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _ = v15.Parent.Hitbox.CFrame;
+                    local l_Size_2 = v15.Parent.Hitbox.Size;
+                    l_Size_2 = l_Size_2 + Vector3.new(l_Size_2.X * 1.4, l_Size_2.Y * 1.4, l_Size_2.Z * 1.4);
+                    local v245 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("solarblazetemplate"):Clone();
+                    v245.Size = l_Size_2 * 0.75;
+                    v245.weld.Part1 = v245;
+                    v245.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_5 = v245.weld;
+                    l_weld_5.C0 = l_weld_5.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v245.Parent = v15;
+                end;
+            elseif v16 == "Celestial" then
+                for _, v248 in pairs(v15:GetDescendants()) do
+                    local v249 = {
+                        0.13
+                    };
+                    local function v256(v250, v251) --[[ Line: 963 ]] --[[ Name: nearest ]]
+                        local v252 = nil;
+                        local v253 = nil;
+                        for v254, v255 in ipairs(v250) do
+                            if not v252 or math.abs(v251 - v255) < v252 then
+                                v252 = math.abs(v251 - v255);
+                                v253 = v254;
+                            end;
+                        end;
+                        return v253, v250[v253];
+                    end;
+                    local function _(v257) --[[ Line: 974 ]] --[[ Name: customClamp ]]
+                        if v257 < 0 then
+                            return v257 + 1;
+                        elseif v257 > 1 then
+                            return v257 - 1;
+                        else
+                            return v257;
+                        end;
+                    end;
+                    local _ = v15:GetScale() * v15:GetScale() + v15:GetBoundingBox().Position.Magnitude;
+                    if v248:IsA("BasePart") then
+                        local v260 = v248.Size.X + v248.Size.Y + v248.Size.Z + v248.Color.R + v248.Color.G + v248.Color.B + v15:GetScale();
+                        local v261, _, v263 = v248.Color:ToHSV();
+                        if v248.Name ~= "Eyes" then
+                            local _, v265 = v256(v249, (v261 + math.noise(v260 * 414)) % 1);
+                            local l_fromHSV_1 = Color3.fromHSV;
+                            local v267 = v265 + Random.new(v260):NextNumber(-0.015, 0.015);
+                            v248.Color = l_fromHSV_1(if v267 < 0 then v267 + 1 else if v267 > 1 then v267 - 1 else v267, 0.35, (math.clamp(v263 + 0.5, 0, 0.75)));
+                            v248.Material = Enum.Material.Glass;
+                            v248.Reflectance = -5;
+                        end;
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _ = v15.Parent.Hitbox.CFrame;
+                    local l_Size_3 = v15.Parent.Hitbox.Size;
+                    l_Size_3 = l_Size_3 + Vector3.new(l_Size_3.X * 1.4, l_Size_3.Y * 1.4, l_Size_3.Z * 1.4);
+                    local v270 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("celestialtemplate"):Clone();
+                    v270.Size = l_Size_3 * 0.85;
+                    v270.weld.Part1 = v270;
+                    v270.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_6 = v270.weld;
+                    l_weld_6.C0 = l_weld_6.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v270.Parent = v15;
+                end;
+            elseif v16 == "Fossilized" then
+                local v272 = Color3.fromRGB(233, 211, 238);
+                local v273 = Color3.fromRGB(135, 122, 218);
+                for _, v275 in pairs(v15:GetDescendants()) do
+                    if v275:IsA("BasePart") and v275.Transparency ~= 1 and v275.Name ~= "Eyes" then
+                        local v276 = v275.Size.X + v275.Size.Y + v275.Size.Z + v275.Color.R + v275.Color.G + v275.Color.B + v15:GetScale();
+                        local _, _, v279 = v275.Color:ToHSV();
+                        local v280, v281, v282 = v272:ToHSV();
+                        local v283, v284, v285 = v273:ToHSV();
+                        local v286 = Random.new(v276):NextInteger(0, 1);
+                        v275.Material = v286 == 1 and Enum.Material.Sand or Enum.Material.Neon;
+                        local v287 = math.clamp((v286 == 1 and v282 or v285) * Random.new(v276):NextNumber(0.9, 1.1) * math.clamp(v279, 0.9, 1), 0, 1);
+                        v275.Color = Color3.fromHSV(v286 == 1 and v280 or v283, v286 == 1 and v281 or v284, v287);
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _ = v15.Parent.Hitbox.CFrame;
+                    local l_Size_4 = v15.Parent.Hitbox.Size;
+                    l_Size_4 = l_Size_4 + Vector3.new(l_Size_4.X * 1.4, l_Size_4.Y * 1.4, l_Size_4.Z * 1.4);
+                    local v290 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("fossilizedtemplate"):Clone();
+                    v290.Size = l_Size_4 * 0.85;
+                    v290.weld.Part1 = v290;
+                    v290.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_7 = v290.weld;
+                    l_weld_7.C0 = l_weld_7.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v290.Parent = v15;
+                end;
+            elseif v16 == "Amber" then
+                for _, v293 in pairs(v15:GetDescendants()) do
+                    if v293:IsA("BasePart") and v293.Transparency ~= 1 and v293.Name ~= "Eyes" then
+                        local _ = v293.Size.X + v293.Size.Y + v293.Size.Z + v293.Color.R + v293.Color.G + v293.Color.B + v15:GetScale();
+                        local _, v296, v297 = v293.Color:ToHSV();
+                        v293.Color = Color3.fromHSV(0.0377778, v296, v297);
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("Center") then
+                    local _ = v15.Parent.Hitbox.CFrame;
+                    local l_Size_5 = v15.Parent.Hitbox.Size;
+                    l_Size_5 = l_Size_5 + Vector3.new(l_Size_5.X * 1.4, l_Size_5.Y * 1.4, l_Size_5.Z * 1.4);
+                    local v300 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("ambertemplate"):Clone();
+                    v300.Size = l_Size_5 * 1.2;
+                    v300:PivotTo(v15.Parent:FindFirstChild("Center"):GetPivot());
+                    v300.weld.Part1 = v300;
+                    v300.weld.Part0 = v15.Parent:FindFirstChild("Center");
+                    v300.Anchored = false;
+                    v300.CanCollide = false;
+                    v300.CanTouch = false;
+                    v300.Massless = true;
+                    v300.Parent = v15;
+                end;
+            elseif v16 == "Scorched" then
+                for _, v302 in pairs(v15:GetDescendants()) do
+                    if v302:IsA("BasePart") and v302.Transparency ~= 1 and v302.Name ~= "Eyes" then
+                        local v303 = v302.Size.X + v302.Size.Y + v302.Size.Z + v302.Color.R + v302.Color.G + v302.Color.B + v15:GetScale();
+                        local v304, _, v306 = v302.Color:ToHSV();
+                        local v307 = Random.new(v303):NextNumber(0.1, 0.3) * math.clamp(v306 + 0.5, 0, 1);
+                        v302.Color = Color3.fromHSV(v304, 0, v307);
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _ = v15.Parent.Hitbox.CFrame;
+                    local l_Size_6 = v15.Parent.Hitbox.Size;
+                    l_Size_6 = l_Size_6 + Vector3.new(l_Size_6.X * 1.4, l_Size_6.Y * 1.4, l_Size_6.Z * 1.4);
+                    local v310 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("scorchedtemplate"):Clone();
+                    v310.Size = l_Size_6;
+                    v310.weld.Part1 = v310;
+                    v310.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_8 = v310.weld;
+                    l_weld_8.C0 = l_weld_8.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v310.Parent = v15;
+                end;
+            elseif v16 == "Lunar" then
+                for _, v313 in pairs(v15:GetDescendants()) do
+                    local v314 = {
+                        0.144, 
+                        0.585, 
+                        0.686
+                    };
+                    local function v321(v315, v316) --[[ Line: 1114 ]] --[[ Name: nearest ]]
+                        local v317 = nil;
+                        local v318 = nil;
+                        for v319, v320 in ipairs(v315) do
+                            if not v317 or math.abs(v316 - v320) < v317 then
+                                v317 = math.abs(v316 - v320);
+                                v318 = v319;
+                            end;
+                        end;
+                        return v318, v315[v318];
+                    end;
+                    local function _(v322) --[[ Line: 1125 ]] --[[ Name: customClamp ]]
+                        if v322 < 0 then
+                            return v322 + 1;
+                        elseif v322 > 1 then
+                            return v322 - 1;
+                        else
+                            return v322;
+                        end;
+                    end;
+                    local _ = v15:GetScale() * v15:GetScale() + v15:GetBoundingBox().Position.Magnitude;
+                    if v313:IsA("BasePart") then
+                        local v325 = v313.Size.X + v313.Size.Y + v313.Size.Z + v313.Color.R + v313.Color.G + v313.Color.B + v15:GetScale();
+                        local v326, _, v328 = v313.Color:ToHSV();
+                        if v313.Name ~= "Eyes" then
+                            local _, v330 = v321(v314, (v326 + math.noise(v325 * 414)) % 1);
+                            local l_fromHSV_2 = Color3.fromHSV;
+                            local v332 = v330 + Random.new(v325):NextNumber(-0.025, 0.025);
+                            v313.Color = l_fromHSV_2(if v332 < 0 then v332 + 1 else if v332 > 1 then v332 - 1 else v332, 0.35, (math.clamp(v328 + 0.5, 0, 0.75)));
+                            v313.Material = Enum.Material.Neon;
+                        end;
+                    end;
+                end;
+                if v15.Parent then
+                    local _, v334 = v15:GetBoundingBox();
+                    if v15:FindFirstChild("Center") then
+                        local v335 = (v334.X + v334.Y + v334.Z) / 4.343;
+                        local v336 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("lunarhalo"):Clone();
+                        v336.Size = Vector3.new(v336.Size.X * v335, v336.Size.Y * v335, v336.Size.Z * v335);
+                        v336.Attachment.Slash.Size = NumberSequence.new(v336.Attachment.Slash.Size.Keypoints[1].Value * v335);
+                        v336.weld.Part1 = v336;
+                        v336.weld.Part0 = v15:FindFirstChild("Center");
+                        local l_weld_9 = v336.weld;
+                        l_weld_9.C0 = l_weld_9.C0 * CFrame.Angles(0, 1.5707963267948966, -0.5235987755982988);
+                        v336.Parent = v15;
+                    end;
+                    if v15:FindFirstChild("handle") then
+                        local v338 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("lunartemplate"):Clone();
+                        v338.Transparency = 1;
+                        v338.Size = v334 * 0.75;
+                        v338.weld.Part1 = v338;
+                        v338.weld.Part0 = v15:FindFirstChild("handle");
+                        local l_weld_10 = v338.weld;
+                        l_weld_10.C0 = l_weld_10.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                        v338.Parent = v15;
+                    end;
+                end;
+            elseif v16 == "Subspace" then
+                if game:GetService("RunService"):IsServer() then
+                    v8[v15.Parent] = v16;
+                    local v340 = Color3.fromRGB(232, 42, 42);
+                    local v341, _, _ = v340:ToHSV();
+                    local function _(v344) --[[ Line: 1188 ]] --[[ Name: customClamp ]]
+                        if v344 < 0 then
+                            return v344 + 1;
+                        elseif v344 > 1 then
+                            return v344 - 1;
+                        else
+                            return v344;
+                        end;
+                    end;
+                    for _, v347 in pairs(v15:GetDescendants()) do
+                        if v347:IsA("BasePart") and v347.Name ~= "Eyes" then
+                            v347.Material = Enum.Material.Neon;
+                            local v348 = v347.Size.X + v347.Size.Y + v347.Size.Z + v347.Color.R + v347.Color.G + v347.Color.B + v15:GetScale();
+                            local _, _, v351 = v347.Color:ToHSV();
+                            local _, v353, v354 = v340:ToHSV();
+                            local v355 = v341 + Random.new(v348):NextNumber(-0.1, 0);
+                            local v356 = if v355 < 0 then v355 + 1 else if v355 > 1 then v355 - 1 else v355;
+                            v347.Color = Color3.fromHSV(v356, v353, (math.clamp(v354 * math.clamp(v351, 0.9, 1), 0, 1)));
+                        end;
+                    end;
+                    if v15.Parent and v15.Parent:FindFirstChild("Center") then
+                        game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("subspacetemplate"):WaitForChild("SubspaceAttachment"):Clone().Parent = v15.Parent:FindFirstChild("Center");
+                    end;
+                    if v15:IsDescendantOf(workspace) then
+                        game.ReplicatedStorage.events.fishMutation:FireAllClients(v15.Parent, v16);
+                    end;
+                else
+                    if v15:IsA("Tool") then
+                        while not v15:FindFirstChild("Fish") and not v15:FindFirstChild("Crate") do
+                            v15.ChildAdded:Wait();
+                        end;
+                        v15 = v15:FindFirstChild("Fish") and v15:FindFirstChild("Fish") or v15:FindFirstChild("Crate");
+                    end;
+                    local v357 = {};
+                    for _, v359 in pairs(v15:GetDescendants()) do
+                        if v359:IsA("BasePart") and v359.Name ~= "Eyes" then
+                            table.insert(v357, v359);
+                        end;
+                    end;
+                    local v360 = nil;
+                    do
+                        local l_v360_0 = v360;
+                        local function v369() --[[ Line: 1239 ]] --[[ Name: StartLoop ]]
+                            if v9[v15] then
+                                v9[v15]:Disconnect();
+                            end;
+                            l_v360_0 = game:GetService("RunService").Heartbeat:Connect(function() --[[ Line: 1243 ]]
+                                if v15 and v15.Parent and v15.Parent:FindFirstChild("Center") and (v15:IsDescendantOf(workspace) or v15:FindFirstAncestorWhichIsA("ViewportFrame")) then
+                                    local l_Character_1 = game.Players.LocalPlayer.Character;
+                                    if l_Character_1 and l_Character_1:FindFirstChild("HumanoidRootPart") then
+                                        local l_Position_2 = v15.Parent:FindFirstChild("Center").Position;
+                                        local l_Position_3 = l_Character_1.HumanoidRootPart.Position;
+                                        local v365 = Vector3.new(l_Position_3.X // 100, l_Position_3.Y // 100, l_Position_3.Z // 100);
+                                        local v366 = Vector3.new(l_Position_2.X // 100, l_Position_2.Y // 100, l_Position_2.Z // 100);
+                                        if v366.X <= v365.X + 1 and v366.X >= v365.X - 1 and v366.Y <= v365.Y + 1 and v366.Y >= v365.Y - 1 and v366.Z <= v365.Z + 1 and v366.Z >= v365.Z - 1 then
+                                            for _, v368 in v357 do
+                                                if v368 and v368.Parent then
+                                                    v368.Transparency = v5;
+                                                end;
+                                            end;
+                                            return;
+                                        end;
+                                    end;
+                                else
+                                    l_v360_0:Disconnect();
+                                end;
+                            end);
+                            v9[v15] = l_v360_0;
+                        end;
+                        v15.AncestryChanged:Connect(function() --[[ Line: 1265 ]]
+                            v369();
+                        end);
+                        v369();
+                    end;
+                end;
+            elseif v16 == "Anomalous" then
+                for _, v371 in pairs(v15:GetDescendants()) do
+                    if v371:IsA("BasePart") then
+                        if v371.Transparency ~= 1 and v371.Name ~= "Eyes" then
+                            v371.Color = Color3.fromRGB(238, 238, 238);
+                            v371.Material = Enum.Material.Plastic;
+                        elseif v371.Name == "Eyes" then
+                            v371.Color = Color3.fromRGB(255, 29, 29);
+                            v371.Material = Enum.Material.Plastic;
+                        end;
+                    end;
+                end;
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _, v373 = v15.Parent:GetBoundingBox();
+                    local v374 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("anomaloustemplate"):Clone();
+                    v374.Size = v373;
+                    v374.weld.Part1 = v374;
+                    v374.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_11 = v374.weld;
+                    l_weld_11.C0 = l_weld_11.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v374.Parent = v15;
+                end;
+            elseif v16 == "Abyssal" then
+                local v376 = Color3.fromRGB(39, 57, 173);
+                local v377 = Color3.fromRGB(83, 41, 173);
+                local _, _, _ = v376:ToHSV();
+                local _, _, _ = v377:ToHSV();
+                local function _(v384, v385, v386) --[[ Line: 1301 ]] --[[ Name: lerp ]]
+                    return v384 + (v385 - v384) * v386;
+                end;
+                if not v15:IsA("Model") then
+                    return;
+                else
+                    for _, v389 in pairs(v15:GetDescendants()) do
+                        if v389:IsA("BasePart") and v389.Transparency ~= 1 and v389.Name ~= "Eyes" then
+                            v389.Material = Enum.Material.Neon;
+                            local v390 = v389.Size.X + v389.Size.Y + v389.Size.Z + v389.Color.R + v389.Color.G + v389.Color.B + v15:GetScale();
+                            local _, _, v393 = v389.Color:ToHSV();
+                            local v394, _, _ = v376:ToHSV();
+                            local v397, _, _ = v377:ToHSV();
+                            local v400 = math.clamp(0.65 * Random.new(v390):NextNumber(0.9, 1.1) * math.clamp(v393, 0.9, 1), 0, 1);
+                            local v401 = Random.new(v390):NextInteger(0, 1);
+                            v389.Color = Color3.fromHSV(v401 == 1 and v394 or v397, 1, v400);
+                            v389:SetAttribute("AbyssalHue", v401 == 1 and v394 or v397);
+                            v389:SetAttribute("AbyssalColor", v401 == 1 and "Blue" or "Purple");
+                            v389:SetAttribute("AbyssalValue", v400);
+                        end;
+                    end;
+                    if game:GetService("RunService"):IsServer() and v15:IsDescendantOf(workspace) then
+                        game.ReplicatedStorage.events.fishMutation:FireAllClients(v15.Parent, v16);
+                    end;
+                    if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                        local _, v403 = v15.Parent:GetBoundingBox();
+                        local v404 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("abyssaltemplate"):Clone();
+                        v404.Size = v403 * 0.75;
+                        v404.weld.Part1 = v404;
+                        v404.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                        local l_weld_12 = v404.weld;
+                        l_weld_12.C0 = l_weld_12.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                        v404.Parent = v15;
+                    end;
+                end;
+            elseif v16 == "Electric" then
+                if v15.Parent and v15.Parent:FindFirstChild("handle") then
+                    local _ = v15.Parent.Hitbox.CFrame;
+                    local l_Size_7 = v15.Parent.Hitbox.Size;
+                    l_Size_7 = l_Size_7 + Vector3.new(l_Size_7.X * 1.4, l_Size_7.Y * 1.4, l_Size_7.Z * 1.4);
+                    local v408 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("electrictemplate"):Clone();
+                    v408.Size = l_Size_7;
+                    v408.weld.Part1 = v408;
+                    v408.weld.Part0 = v15.Parent:FindFirstChild("handle");
+                    local l_weld_13 = v408.weld;
+                    l_weld_13.C0 = l_weld_13.C0 * CFrame.Angles(0, 1.5707963267948966, 0);
+                    v408.strikes.Color = ColorSequence.new(l_fish_0[v15.Parent.Name].SparkleColor);
+                    v408.wind.Color = ColorSequence.new(l_fish_0[v15.Parent.Name].SparkleColor);
+                    v408.Parent = v15;
+                end;
+            elseif v16 == "Frozen" then
+                if v15.Parent and v15.Parent:FindFirstChild("Center") then
+                    local _ = v15.Parent.Hitbox.CFrame;
+                    local l_Size_8 = v15.Parent.Hitbox.Size;
+                    l_Size_8 = l_Size_8 + Vector3.new(l_Size_8.X * 1.4, l_Size_8.Y * 1.4, l_Size_8.Z * 1.4);
+                    local v412 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("replicated"):WaitForChild("instances"):WaitForChild("general"):WaitForChild("frozentemplate"):Clone();
+                    v412.Size = l_Size_8 * 1.2;
+                    v412:PivotTo(v15.Parent:FindFirstChild("Center"):GetPivot());
+                    v412.weld.Part1 = v412;
+                    v412.weld.Part0 = v15.Parent:FindFirstChild("Center");
+                    v412.Anchored = false;
+                    v412.CanCollide = false;
+                    v412.CanTouch = false;
+                    v412.Massless = true;
+                    v412.Parent = v15;
+                end;
+            elseif v16 == "Sandy" then
+                local v413 = {
+                    Color3.fromRGB(221, 195, 159), 
+                    Color3.fromRGB(199, 176, 144), 
+                    Color3.fromRGB(185, 163, 134), 
+                    Color3.fromRGB(252, 221, 181), 
+                    Color3.fromRGB(227, 199, 163)
+                };
+                for _, v415 in pairs(v15:GetDescendants()) do
+                    if v415:IsA("BasePart") then
+                        if v415:IsA("MeshPart") then
+                            v415.Color = v413[math.random(1, #v413)];
+                            v415.Material = Enum.Material.Sand;
+                        elseif not v415:IsA("UnionOperation") and v415.Shape ~= Enum.PartType.Cylinder or v415:IsA("UnionOperation") then
+                            v415.Color = v413[math.random(1, #v413)];
+                            v415.Material = Enum.Material.Sand;
+                        end;
+                    end;
+                end;
+            end;
+        end;
+        return;
+    end;
+end;
+return v0;
