@@ -52,7 +52,7 @@ local Themes = {
         },
         ["Snow"] = {
             COLOR_1 = Color3.fromRGB(240, 240, 240),
-            COLOR_2 = Color3.fromRGB(30, 30, 30),
+            COLOR_2 = Color3.fromRGB(27, 27, 27),
             COLOR_TEXT = Color3.fromRGB(220, 220, 220)
         },
         ["Violet"] = {
