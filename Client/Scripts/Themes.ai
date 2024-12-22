@@ -1,66 +1,61 @@
 local Themes = {
-	Presets = {
-		["Default"] = {
-			COLOR_1 = Color3.fromRGB(153, 153, 255);
-			COLOR_2 = Color3.fromRGB(41, 48, 167);
-		};
-		["Navy"] = {
-			COLOR_1 = Color3.fromRGB(130, 174, 255);
-			COLOR_2 = Color3.fromRGB(80, 120, 200);
-            COLOR_TEXT = Color3.fromRGB(0, 0, 0);
-		};
-		["Magenta"] = {
-			COLOR_1 = Color3.fromRGB(200, 75, 150);
-			COLOR_2 = Color3.fromRGB(150, 50, 125)
-		};
-		["Olive"] = {
-			COLOR_1 = Color3.fromRGB(100, 220, 100);
-			COLOR_2 = Color3.fromRGB(70, 170, 70)
-		};
-		["Lime"] = {
-			COLOR_1 = Color3.fromRGB(225, 255, 125);
-			COLOR_2 = Color3.fromRGB(180, 220, 90)
-		};
-		["Amethyst"] = {
-			COLOR_1 = Color3.fromRGB(200, 130, 115);
-			COLOR_2 = Color3.fromRGB(150, 90, 85)
-		};
-		["Onyx"] = {
-			COLOR_1 = Color3.fromRGB(255, 255, 255);
-			COLOR_2 = Color3.fromRGB(200, 200, 200)
-		};
-		["Lemon"] = {
-			COLOR_1 = Color3.fromRGB(255, 200, 100);
-			COLOR_2 = Color3.fromRGB(220, 170, 80)
-		};
-		["Rouge"] = {
-			COLOR_1 = Color3.fromRGB(230, 130, 180);
-			COLOR_2 = Color3.fromRGB(200, 100, 150)
-		};
-		["Cobalt"] = {
-			COLOR_1 = Color3.fromRGB(100, 155, 200);
-			COLOR_2 = Color3.fromRGB(70, 120, 170)
-		};
-		["Crimson"] = {
-			COLOR_1 = Color3.fromRGB(225, 100, 100);
-			COLOR_2 = Color3.fromRGB(180, 70, 70)
-		};
-		["Snow"] = {
-			COLOR_1 = Color3.fromRGB(75, 75, 75);
-			COLOR_2 = Color3.fromRGB(50, 50, 50)
-		};
-		["Violet"] = {
-			COLOR_1 = Color3.fromRGB(125, 85, 225);
-			COLOR_2 = Color3.fromRGB(90, 60, 180)
-		};
-		["APOCALYPSE"] = {
-			COLOR_1 = Color3.fromRGB(255, 0, 127);
-			COLOR_2 = Color3.fromRGB(58, 0, 29);
-		};
-		["LUXUR4C"] = {
-			COLOR_1 = Color3.fromRGB(254, 192, 92);
-			COLOR_2 = Color3.fromRGB(132, 96, 48);
-		};
-	}
+    Presets = {
+        ["Default"] = {
+            COLOR_1 = Color3.fromRGB(153, 153, 255),
+            COLOR_2 = Color3.fromRGB(41, 48, 167)
+        },
+        ["Navy"] = {
+            COLOR_1 = Color3.fromRGB(180, 200, 255),
+            COLOR_2 = Color3.fromRGB(20, 40, 80)
+        },
+        ["Magenta"] = {
+            COLOR_1 = Color3.fromRGB(255, 180, 220),
+            COLOR_2 = Color3.fromRGB(80, 20, 60)
+        },
+        ["Olive"] = {
+            COLOR_1 = Color3.fromRGB(180, 220, 180),
+            COLOR_2 = Color3.fromRGB(30, 60, 30)
+        },
+        ["Lime"] = {
+            COLOR_1 = Color3.fromRGB(220, 255, 220),
+            COLOR_2 = Color3.fromRGB(40, 80, 40)
+        },
+        ["Amethyst"] = {
+            COLOR_1 = Color3.fromRGB(220, 180, 220),
+            COLOR_2 = Color3.fromRGB(60, 30, 60)
+        },
+        ["Onyx"] = {
+            COLOR_1 = Color3.fromRGB(240, 240, 240),
+            COLOR_2 = Color3.fromRGB(40, 40, 40)
+        },
+        ["Lemon"] = {
+            COLOR_1 = Color3.fromRGB(255, 240, 180),
+            COLOR_2 = Color3.fromRGB(80, 70, 20)
+        },
+        ["Rouge"] = {
+            COLOR_1 = Color3.fromRGB(255, 200, 220),
+            COLOR_2 = Color3.fromRGB(80, 30, 50)
+        },
+        ["Cobalt"] = {
+            COLOR_1 = Color3.fromRGB(180, 200, 255),
+            COLOR_2 = Color3.fromRGB(20, 40, 80)
+        },
+        ["Snow"] = {
+            COLOR_1 = Color3.fromRGB(240, 240, 240),
+            COLOR_2 = Color3.fromRGB(30, 30, 30)
+        },
+        ["Violet"] = {
+            COLOR_1 = Color3.fromRGB(200, 180, 255),
+            COLOR_2 = Color3.fromRGB(40, 20, 80)
+        },
+        ["Crimson"] = {
+            COLOR_1 = Color3.fromRGB(255, 0, 127),
+            COLOR_2 = Color3.fromRGB(58, 0, 29)
+        },
+        ["Luxury"] = {
+            COLOR_1 = Color3.fromRGB(255, 220, 180),
+            COLOR_2 = Color3.fromRGB(60, 40, 20)
+        }
+    }
 }
 return Themes
