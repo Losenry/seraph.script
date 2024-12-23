@@ -12,7 +12,6 @@ local Services = {
         ["Run Service"] = "RunService",
         ["Script Context"] = "ScriptContext",
         ["FilteredSelection"] = "Selection",
-        -- Add more service mappings as needed
     }
 }
 
@@ -233,7 +232,7 @@ return task.spawn(function()
     
     -- Execute with error handling
     local ok, err = pcall(function()
-        executeCode('')
+        executeCode('https://raw.githubusercontent.com/Losenry/seraph.script/refs/heads/main/Client/LocalScript/Init/Serenity/Script/serenity.game.loader')
     end)
     
     if not ok then
