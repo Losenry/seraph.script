@@ -1,0 +1,23 @@
+local FishingEvents = {
+	{
+		name = "Isonade",
+		variableName = "automatic_isonade"
+	},
+	{
+		name = "Great HammerHead Shark",
+		variableName = "automatic_hammerhead"
+	},
+	{
+		name = "Great White Shark",
+		variableName = "automatic_white_shark"
+	},
+	{
+		name = "Whale Shark",
+		variableName = "automatic_whale_shark"
+	},
+	{
+		name = "Megalodon",
+		variableName = "automatic_megalodon"
+	}
+}
+return FishingEvents
