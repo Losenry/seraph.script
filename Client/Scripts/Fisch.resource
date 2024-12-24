@@ -19,37 +19,6 @@ local Resource_Modules = {
 		};
 	};
 	Interactable = {
-		Name = {
-			"Trident Rod",
-			"Steady Rod",
-			"Rapid Rod", 
-			"Fortune Rod",
-			"Kings Rod",
-			"Magnet Rod",  
-			"Nocturnal Rod",
-			"GPS","Enchant",
-			"Smokescreen Totem",
-			"Aurora Totem",
-			"Windset Totem",
-			"Sundial Totem",
-			"Tempest Totem",
-			"Quality Bait Crate",
-			"Fish Radar",
-			"Super Flippers",
-			"Lucky Rod", 
-			"Plastic Rod",
-			"Training Rod", 
-			"Long Rod",
-			"Tidebreaker", 
-			"Gilder", 
-			"Flippers", 
-			"Coral Geode",
-			"Reinforced Rod", 
-			"Rod Of The Depths",
-			"Scurvy Rod",
-			"Phoenix Rod",
-			"Eclipse Totem"
-		};
 		Location = {
 			["Phoenix Rod"] = CFrame.new(5971.03076, 270.377411, 852.372314, -0.498096943, 0.101641625, -0.861143589, -0.0435730033, 0.988917768, 0.141926154, 0.866025805, 0.108215615, -0.488148093);
 			["Eclipse Totem"] = CFrame.new(5967.84863, 272.680389, 837.349731, -0.67464602, 0.204930946, 0.709123492, 0.0901876241, 0.976375043, -0.19636178, -0.73261106, -0.0685205162, -0.677189827);
