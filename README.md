@@ -1,1 +1,1 @@
-# seraph.script, dont be skidded lol
+# fuck you!
