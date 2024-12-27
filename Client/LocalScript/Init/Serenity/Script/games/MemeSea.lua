@@ -1,1 +1,1 @@
-
+print("THIS IS MEMESEA SCRIPT")
