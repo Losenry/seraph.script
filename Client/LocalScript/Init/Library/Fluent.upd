@@ -1,4 +1,9 @@
 -- #1
+for _, v in pairs(game:GetDescendants()) do
+    if v.Name:match('NEXT') then
+        v:Destroy()
+    end
+end
 
 local cloneref = cloneref or function(a)
 	return a
