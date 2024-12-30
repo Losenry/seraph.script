@@ -1704,7 +1704,7 @@ function b:Window(t)
 			local t = t or {}
 			local an = {
 				Title = t.title or t.Title or "Toggle",
-				Description = t.description or t.Description or t.desc or t.Desc or "this is a toggle",
+				Description = t.description or t.Description or t.desc or t.Desc or "",
 				Default = t.default or t.Default or false,
 				Flags = t.flags or t.Flags or t.pointer or t.Pointer or t.flag or t.Flag or false,
 				Sections = t.sections or t.Sections or false
