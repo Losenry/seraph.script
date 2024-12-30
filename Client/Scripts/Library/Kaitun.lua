@@ -85,7 +85,6 @@ function Init:Create(...)
 	local Temp = {}
 
 	function Temp:Add(...)
-        local LabelFunc = {}
 		local TextLabel = Instance.new("TextLabel")
 		TextLabel.Parent = ScrollingFrame
 		TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -103,15 +102,7 @@ function Init:Create(...)
 		TextLabel.TextSize = 15
 		TextLabel.TextStrokeTransparency = 11
 		TextLabel.TextWrapped = true
-
-        LabelFunc.Refresh = function(...)
-            LabelFunc.Text = ...
-        end
-
-        LabelFunc.Options = function(...)
-            return LabelFunc
-        end
-        return LabelFunc
+        return TextLabel
 	end
 
 	function Temp:ToggleUI()
