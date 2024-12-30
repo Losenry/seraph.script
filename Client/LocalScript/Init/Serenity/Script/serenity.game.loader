@@ -4,9 +4,9 @@ local Scripts = {
 		[1202096104] = "Driving-Empire.lua";
 		[4093155512] = "Sword-Burst3.lua";
 		[3756501373] = "MemeSea.lua";
-        [8304191830] = "AnimeAdventure.lua";
+        [3183403065] = "AnimeAdventure.lua";
         [1511883870] = 'Shindo-Life.lua';
-        [10450270085] = 'JujutsuInfinite.lua';
+        [3808223175] = 'JujutsuInfinite.lua';
 	};
 	path = 'https://raw.githubusercontent.com/Losenry/seraph.script/refs/heads/main/Client/LocalScript/Init/Serenity/Script/games/'
 }
@@ -18,9 +18,6 @@ do
                 if Scripts.lists[game.GameId] then
                     print(Scripts.lists[game.GameId])
                     loadstring(game:HttpGetAsync(Scripts.path..Scripts.lists[game.GameId]))();
-                    return true
-                else
-                    return warn('Mismatch game or didnt support this game!')
                 end
             else
                 return warn('Unable to load script lists or Unable to load path url')
