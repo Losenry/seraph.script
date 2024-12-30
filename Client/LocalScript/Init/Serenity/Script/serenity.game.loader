@@ -4,23 +4,30 @@ local Scripts = {
 		[1202096104] = "Driving-Empire.lua";
 		[4093155512] = "Sword-Burst3.lua";
 		[3756501373] = "MemeSea.lua";
+        [8304191830] = "AnimeAdventure.lua";
+        [1511883870] = 'Shindo-Life.lua';
+        [10450270085] = 'JujutsuInfinite.lua';
 	};
 	path = 'https://raw.githubusercontent.com/Losenry/seraph.script/refs/heads/main/Client/LocalScript/Init/Serenity/Script/games/'
 }
 
 do
-	Scripts.Loader = function()
-		if Scripts.lists and Scripts.path then
-			if Scripts.lists[game.GameId] then
-				print(Scripts.lists[game.GameId])
-				loadstring(game:HttpGet(Scripts.path..Scripts.lists[game.GameId]))();
-				return true
-			else
-				return warn('Mismatch game or didnt support this game!')
-			end
-		else
-			return warn('Unable to load script lists or Unable to load path url')
-		end
-	end
+   Scripts.Loader = function()
+        if not _G.Full_AutoPlay then
+            if Scripts.lists and Scripts.path then
+                if Scripts.lists[game.GameId] then
+                    print(Scripts.lists[game.GameId])
+                    loadstring(game:HttpGetAsync(Scripts.path..Scripts.lists[game.GameId]))();
+                    return true
+                else
+                    return warn('Mismatch game or didnt support this game!')
+                end
+            else
+                return warn('Unable to load script lists or Unable to load path url')
+            end
+        else
+            return loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Losenry/seraph.script/refs/heads/main/Client/LocalScript/Init/Serenity/Script/games/AnimeAdventure.lua'))();
+        end
+    end
 end
 return pcall(Scripts.Loader);
