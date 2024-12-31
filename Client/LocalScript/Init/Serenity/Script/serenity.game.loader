@@ -14,6 +14,10 @@ local Scripts = {
 do
    Scripts.Loader = function()
         if not _G.Full_AutoPlay then
+            if not Scripts.lists[game.GameId] then
+                return print('mismatch game or not supported')
+            end
+            
             if Scripts.lists and Scripts.path then
                 if Scripts.lists[game.GameId] then
                     print(Scripts.lists[game.GameId])
@@ -27,4 +31,4 @@ do
         end
     end
 end
-return pcall(Scripts.Loader);
+return task.spawn(Scripts.Loader);
