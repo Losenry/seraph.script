@@ -18,6 +18,10 @@ local FishingEvents = {
 	{
 		name = "Megalodon",
 		variableName = "automatic_megalodon"
-	}
+	},
+    {
+		name = "Golden Tide",
+		variableName = "automatic_golden_tide"
+    }
 }
 return FishingEvents
