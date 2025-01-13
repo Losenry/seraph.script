@@ -22,6 +22,10 @@ local FishingEvents = {
     {
 		name = "Golden Tide",
 		variableName = "automatic_golden_tide"
-    }
+    },
+    {
+        name = 'Snowcap Algae Pool',
+        variableName = "automatic_snowcap_algae"
+    },
 }
 return FishingEvents
