@@ -19,13 +19,25 @@ local FishingEvents = {
 		name = "Megalodon",
 		variableName = "automatic_megalodon"
 	},
-    {
+	{
 		name = "Golden Tide",
 		variableName = "automatic_golden_tide"
-    },
-    {
-        name = 'Snowcap Algae Pool',
-        variableName = "automatic_snowcap_algae"
-    },
+	},
+	{
+		name = 'Snowcap Algae Pool',
+		variableName = "automatic_snowcap_algae"
+	},
+	{
+		name = 'Ancient Algae Pool',
+		variableName = "automatic_ancient_algae"
+	},
+	{
+		name = 'Forsaken Algae Pool',
+		variableName = "automatic_forsaken_algae"
+	},
+	{
+		name = 'Mushgrove Algae Pool',
+		variableName = "automatic_mushgrove_algae"
+	},
 }
 return FishingEvents
