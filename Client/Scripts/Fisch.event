@@ -39,5 +39,9 @@ local FishingEvents = {
 		name = 'Mushgrove Algae Pool',
 		variableName = "automatic_mushgrove_algae"
 	},
+	{
+		name = 'The Kraken Pool',
+		variableName = "automatic_kraken",
+	},
 }
 return FishingEvents
